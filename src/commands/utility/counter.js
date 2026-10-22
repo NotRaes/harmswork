@@ -280,7 +280,7 @@ class CounterCommand {
 
         try {
             const container = new ContainerBuilder();
-            container.setAccentColor(config.colors.c || 0x0A0A0C);
+            container.setAccentColor(typeof config.colors.c === 'string' ? parseInt(config.colors.c.replace('#', ''), 16) : (config.colors.c || 0x0A0A0C));
 
             const section = new SectionBuilder()
                 .addTextDisplayComponents(new TextDisplayBuilder().setContent(overviewText))

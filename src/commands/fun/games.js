@@ -356,7 +356,7 @@ class GamesCommand {
         let replyMsg;
         try {
             const container = new ContainerBuilder();
-            container.setAccentColor(config.colors.c || 0x0A0A0C);
+            container.setAccentColor(typeof config.colors.c === 'string' ? parseInt(config.colors.c.replace('#', ''), 16) : (config.colors.c || 0x0A0A0C));
 
             const section = new SectionBuilder()
                 .addTextDisplayComponents(new TextDisplayBuilder().setContent(hubDescription))
@@ -458,7 +458,7 @@ class GamesCommand {
 
             try {
                 const container = new ContainerBuilder();
-                container.setAccentColor(config.colors.c || 0x0A0A0C);
+                container.setAccentColor(typeof config.colors.c === 'string' ? parseInt(config.colors.c.replace('#', ''), 16) : (config.colors.c || 0x0A0A0C));
 
                 const section = new SectionBuilder().addTextDisplayComponents(
                     new TextDisplayBuilder().setContent(desc)
@@ -566,7 +566,7 @@ class GamesCommand {
 
             try {
                 const container = new ContainerBuilder();
-                container.setAccentColor(config.colors.c || 0x0A0A0C);
+                container.setAccentColor(typeof config.colors.c === 'string' ? parseInt(config.colors.c.replace('#', ''), 16) : (config.colors.c || 0x0A0A0C));
 
                 const section = new SectionBuilder().addTextDisplayComponents(
                     new TextDisplayBuilder().setContent(desc)
@@ -673,7 +673,7 @@ class GamesCommand {
 
             try {
                 const container = new ContainerBuilder();
-                container.setAccentColor(config.colors.c || 0x0A0A0C);
+                container.setAccentColor(typeof config.colors.c === 'string' ? parseInt(config.colors.c.replace('#', ''), 16) : (config.colors.c || 0x0A0A0C));
 
                 const section = new SectionBuilder().addTextDisplayComponents(
                     new TextDisplayBuilder().setContent(desc)
@@ -781,7 +781,7 @@ class GamesCommand {
 
             try {
                 const container = new ContainerBuilder();
-                container.setAccentColor(config.colors.c || 0x0A0A0C);
+                container.setAccentColor(typeof config.colors.c === 'string' ? parseInt(config.colors.c.replace('#', ''), 16) : (config.colors.c || 0x0A0A0C));
 
                 const section = new SectionBuilder().addTextDisplayComponents(
                     new TextDisplayBuilder().setContent(desc)
@@ -862,7 +862,7 @@ class GamesCommand {
         let payload;
         try {
             const container = new ContainerBuilder();
-            container.setAccentColor(config.colors.c || 0x0A0A0C);
+            container.setAccentColor(typeof config.colors.c === 'string' ? parseInt(config.colors.c.replace('#', ''), 16) : (config.colors.c || 0x0A0A0C));
 
             const section = new SectionBuilder().addTextDisplayComponents(
                 new TextDisplayBuilder().setContent(desc)
@@ -916,7 +916,7 @@ class GamesCommand {
 
             try {
                 const container = new ContainerBuilder();
-                container.setAccentColor(config.colors.c || 0x0A0A0C);
+                container.setAccentColor(typeof config.colors.c === 'string' ? parseInt(config.colors.c.replace('#', ''), 16) : (config.colors.c || 0x0A0A0C));
 
                 const section = new SectionBuilder().addTextDisplayComponents(
                     new TextDisplayBuilder().setContent(desc)
@@ -1024,7 +1024,7 @@ class GamesCommand {
 
             try {
                 const container = new ContainerBuilder();
-                container.setAccentColor(config.colors.c || 0x0A0A0C);
+                container.setAccentColor(typeof config.colors.c === 'string' ? parseInt(config.colors.c.replace('#', ''), 16) : (config.colors.c || 0x0A0A0C));
 
                 const section = new SectionBuilder().addTextDisplayComponents(
                     new TextDisplayBuilder().setContent(desc)
@@ -1109,7 +1109,7 @@ class GamesCommand {
         let payload;
         try {
             const container = new ContainerBuilder();
-            container.setAccentColor(config.colors.c || 0x0A0A0C);
+            container.setAccentColor(typeof config.colors.c === 'string' ? parseInt(config.colors.c.replace('#', ''), 16) : (config.colors.c || 0x0A0A0C));
 
             const section = new SectionBuilder().addTextDisplayComponents(
                 new TextDisplayBuilder().setContent(desc)
@@ -1154,7 +1154,7 @@ class GamesCommand {
 
             try {
                 const c = new ContainerBuilder();
-                c.setAccentColor(config.colors.c || 0x0A0A0C);
+                c.setAccentColor(typeof config.colors.c === 'string' ? parseInt(config.colors.c.replace('#', ''), 16) : (config.colors.c || 0x0A0A0C));
                 c.addSectionComponents(new SectionBuilder().addTextDisplayComponents(new TextDisplayBuilder().setContent(winText)));
                 await gameMsg.edit({ components: [c], flags: MessageFlags.IsComponentsV2 }).catch(() => {});
             } catch (_) {
@@ -1172,7 +1172,7 @@ class GamesCommand {
 
             try {
                 const c = new ContainerBuilder();
-                c.setAccentColor(config.colors.c || 0x0A0A0C);
+                c.setAccentColor(typeof config.colors.c === 'string' ? parseInt(config.colors.c.replace('#', ''), 16) : (config.colors.c || 0x0A0A0C));
                 c.addSectionComponents(new SectionBuilder().addTextDisplayComponents(new TextDisplayBuilder().setContent(timeoutText)));
                 await gameMsg.edit({ components: [c], flags: MessageFlags.IsComponentsV2 }).catch(() => {});
             } catch (_) {

@@ -27,7 +27,7 @@ function getFilterSummary(filters) {
 
 function buildStudioContainer(state, disabled = false) {
     const container = new ContainerBuilder();
-    container.setAccentColor(config.colors.c || 0x0A0A0C);
+    container.setAccentColor(typeof config.colors.c === 'string' ? parseInt(config.colors.c.replace('#', ''), 16) : (config.colors.c || 0x0A0A0C));
     const e = config.emojis || {};
 
     const discEmoji = e.harm_disc || '<:harm_disc:1561738406403244033>';
